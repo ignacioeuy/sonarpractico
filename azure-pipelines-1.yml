@@ -13,10 +13,10 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'ls -l /home/vsts/work/'
+    script: 'ls -l /home/vsts/work/1/s'
 
 - task: CmdLine@2
   inputs:
     script: |
-      cd /home/vsts/work/
+      cd /home/vsts/work/1/s
       tree
