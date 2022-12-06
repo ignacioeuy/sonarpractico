@@ -20,3 +20,11 @@ steps:
     script: |
       cd /home/vsts/work/1/s
       tree
+- task: S3Upload@1
+  inputs:
+    awsCredentials: 'AWS'
+    regionName: 'us-east-1'
+    bucketName: 'proyecto-ort-2022g2-argocd'
+    sourceFolder: '/home/vsts/work/1/s'
+    globExpressions: '**.yml'
+    targetFolder: 'orders'
