@@ -14,3 +14,9 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'ls -l /home/vsts/work/'
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd /home/vsts/work/
+      tree
